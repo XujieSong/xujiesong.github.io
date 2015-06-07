@@ -224,8 +224,8 @@
 					</header>
 					<form method="get" action="" name="contactForm" class="container 50%">
 						<div class="row uniform 50%">
-							<div class="8u 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Your Email" /></div>
-							<div class="4u$ 12u$(xsmall)"><input type="button" value="Get Started" class="fit special" onClick="testResults(this.form)"/></div>
+							<div class="8u 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Your Email" required/></div>
+							<div class="4u$ 12u$(xsmall)"><input type="button" value="Get Started" class="fit special" onClick="submitForm(this.form)"/></div>
 						</div>
 					</form>
 				</div>
@@ -240,7 +240,7 @@
 					<li><a href="https://www.linkedin.com/company/sk8-pty-ltd" class="icon alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
 					<li><a href="http://www.github.com/sk8-pty-ltd" class="icon alt fa-github" target="_blank"><span class="label">Github</span></a></li>
 					<li><a href="mailto:feedback@sk8.asia?Subject=Hello%20Shelf" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
-					<li class="visible-xs-inline-block"><a href="tel:+61449843149" class="icon alt fa-phone"><span class="label">Email</span></a></li>
+					<li class="visible-xs-inline-block"><a href="tel:+61449843149" class="icon alt fa-phone"><span class="label">Phone</span></a></li>
 				</ul>
 				<ul class="copyright">
 					<li>&copy; <a href="http://www.sk8.asia">SK8 PTY LTD 2015.</a> All rights reserved.</li>
@@ -258,31 +258,7 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.5.4.js"></script>
 		<script src="assets/js/main.js"></script>
-		<SCRIPT LANGUAGE="JavaScript">
-		function testResults (form) {
-			var email = form.email.value;
-			var message = "I'm interested in Building my own shop, please reply to: " + email;
-			AV.initialize("4o3i1fycn2pq7qywqjpmxhvxta0scu2hajj8i0j8wpbk34sk", "u48qyxtcc8yufeqgzu8wot1t6q71rcbm8u65gasuq84qoqau");
-			AV.User.logIn("public@shelf.is", "12345678", {
-			  success: function(user) {
-				AV.Cloud.run('sendEmail', {
-					'receiver': '133342301@163.com',
-					'subject': 'Shelf Enquiry',
-					'message': message
-				}, {
-			      success: function(data){
-			      	alert("Thank you for your interest, we will get back to you soon!");
-			      },
-			      error: function(err){
-			        alert(err.message);
-			      }
-			    }); 
-			  },
-			  error: function(user, error) {
-			  	alert("Error logging");
-			  }
-			});
-		}
-		</SCRIPT>
+		<script src="assets/js/email.js"></script>
+		<script src="assets/js/google.analytics.js"></script>
 	</body>
 </html>

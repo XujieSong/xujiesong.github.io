@@ -97,3 +97,13 @@ $('#eighthButton').on('click', function() {
 		'eventValue': 1
 	});
 });
+$('#demoButton').on('click', function() {
+	//Register with Google
+	ga('send', {
+		'hitType': 'event', // Required.
+		'eventCategory': 'button', // Required.
+		'eventAction': 'click', // Required.
+		'eventLabel': 'Check demo',
+		'eventValue': 0
+	});
+});

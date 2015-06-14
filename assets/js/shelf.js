@@ -1,6 +1,13 @@
 $(document).ready(function() {
-	console.log('ready');
-
+	AV.initialize("4o3i1fycn2pq7qywqjpmxhvxta0scu2hajj8i0j8wpbk34sk", "u48qyxtcc8yufeqgzu8wot1t6q71rcbm8u65gasuq84qoqau");
+	AV.User.logIn("public@shelf.is", "12345678", {
+		success: function(user) {
+			console.log('Page ready');
+		},
+		error: function(user, error) {
+			alert("Error logging");
+		}
+	});
 	var switch0 = false;
 	var switch1 = false;
 	var switch2 = false;
@@ -114,24 +121,16 @@ function submitForm(form) {
 		alert("Please enter a valid email.");
 	} else {
 		var message = "I'm interested in Building my own shop, please reply to: " + email;
-		AV.initialize("4o3i1fycn2pq7qywqjpmxhvxta0scu2hajj8i0j8wpbk34sk", "u48qyxtcc8yufeqgzu8wot1t6q71rcbm8u65gasuq84qoqau");
-		AV.User.logIn("public@shelf.is", "12345678", {
-			success: function(user) {
-				AV.Cloud.run('sendEmail', {
-					'receiver': '133342301@163.com',
-					'subject': 'Shelf Enquiry',
-					'message': message
-				}, {
-					success: function(data) {
-						alert("Thank you for your interest, we will get back to you soon!");
-					},
-					error: function(err) {
-						alert(err.message);
-					}
-				});
+		AV.Cloud.run('sendEmail', {
+			'receiver': '133342301@163.com',
+			'subject': 'Shelf Enquiry',
+			'message': message
+		}, {
+			success: function(data) {
+				alert("Thank you for your interest, we will get back to you soon!");
 			},
-			error: function(user, error) {
-				alert("Error logging");
+			error: function(err) {
+				alert(err.message);
 			}
 		});
 	}

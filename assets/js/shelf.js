@@ -2,12 +2,13 @@ $(document).ready(function() {
 	AV.initialize("4o3i1fycn2pq7qywqjpmxhvxta0scu2hajj8i0j8wpbk34sk", "u48qyxtcc8yufeqgzu8wot1t6q71rcbm8u65gasuq84qoqau");
 	AV.User.logIn("public@shelf.is", "12345678", {
 		success: function(user) {
-			console.log('Page ready');
+			console.log('Page is ready');
 		},
 		error: function(user, error) {
 			alert("Error logging");
 		}
 	});
+
 	var switch0 = false;
 	var switch1 = false;
 	var switch2 = false;

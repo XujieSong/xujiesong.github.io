@@ -123,7 +123,9 @@ function submitForm(form) {
 	} else {
 		var message = "I'm interested in Building my own shop, please reply to: " + email;
 		AV.Cloud.run('sendEmail', {
-			'receiver': '133342301@163.com',
+			'name': 'Customer',
+			'email': email,
+			'receiver': 'sk8tech@163.com',
 			'subject': 'Shelf Enquiry',
 			'message': message
 		}, {

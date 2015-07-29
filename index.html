@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<meta name="title" content="Shelf - the online shop you own">
+		<meta name="title" content="Shelf - the online shop you own" itemprop="title">
 		<meta name="description" content="Start a shop online, be found on search engines &#38; App Store. Custom design and full online marketing services." itemprop="description">
 		<meta name="keywords" content="online shop, build an online shop, start a shop online, online marketing, SEO, Custom design, ecommerce software, SK8 Tech, http://sk8.asia" itemprop="keywords">
 		<meta name="author" content="SK8 Tech, http://sk8.asia, SK8 PTY LTD" itemprop="author reviewedBy provider">
@@ -62,32 +62,56 @@
 			<header id="header">
 				<h1 id="logo"><a href="#">Shelf</a></h1>
 				<nav id="nav">
-					<ul class="breadcrumb">
+					<ul class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
 						<li>
-							<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-								<a itemprop="potentialAction" id="buttonZero" href="#one" class="scrolly"><span itemprop="title">About</span></a>
+							<span itemscope itemprop="child" itemtype="http://data-vocabulary.org/Breadcrumb">
+								<a itemprop="url potentialAction" id="buttonZero" href="#one" class="scrolly"><span itemprop="title">About</span></a>
 							</span>
 						</li>
-						<!-- <li>
-												<a href="#">Layouts</a>
-												<ul>
-																		<li><a href="left-sidebar.html">Left Sidebar</a></li>
-																		<li><a href="right-sidebar.html">Right Sidebar</a></li>
-																		<li><a href="no-sidebar.html">No Sidebar</a></li>
-																		<li>
-																								<a href="#">Submenu</a>
-																								<ul>
-																														<li><a href="#">Option 1</a></li>
-																														<li><a href="#">Option 2</a></li>
-																														<li><a href="#">Option 3</a></li>
-																														<li><a href="#">Option 4</a></li>
-																								</ul>
-																		</li>
-												</ul>
-						</li> -->
+						<li>
+							<span itemscope itemprop="child" itemtype="http://data-vocabulary.org/Breadcrumb">
+								<a itemprop="url" href="http://shelf.is/design"><span itemprop="title">Design</span></a>
+							</span>
+						</li>
+						<li>
+							<span itemscope itemprop="child" itemtype="http://data-vocabulary.org/Breadcrumb">
+								<a itemprop="url potentialAction" href="#"><span itemprop="title">Product</span></a>
+							</span>
+							<ul class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+								<li>
+									<span itemscope itemprop="child" itemtype="http://data-vocabulary.org/Breadcrumb">
+										<a itemprop="url" href="left-sidebar.html"><span itemprop="title">Left Sidebar</span></a>
+									</span>
+								</li>
+								<li>
+									<span itemscope itemprop="child" itemtype="http://data-vocabulary.org/Breadcrumb">
+										<a itemprop="url" href="right-sidebar.html"><span itemprop="title">Right Sidebar</span></a>
+									</span>
+								</li>
+								<li>
+									<span itemscope itemprop="child" itemtype="http://data-vocabulary.org/Breadcrumb">
+										<a itemprop="url" href="http://shelf.is/design"><span itemprop="title">Design</span></a>
+									</span>
+								</li>
+								<li>
+									<a href="#">Submenu</a>
+									<ul>
+										<li><a href="#">Option 1</a></li>
+										<li><a href="#">Option 2</a></li>
+										<li><a href="#">Option 3</a></li>
+										<li><a href="#">Option 4</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
 						<li>
 							<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-								<a itemprop="url" id="demoButton0" href="http://watchonly.shelf.is"><span itemprop="title">Demo</span></a>
+								<a itemprop="url" id="demoButton0" href="http://watchonly.shelf.is"><span itemprop="title">Pricing</span></a>
+							</span>
+						</li>
+						<li>
+							<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+								<a itemprop="url" href="http://contact.sk8.asia"><span itemprop="title">Contact</span></a>
 							</span>
 						</li>
 						<li>
@@ -151,8 +175,9 @@
 					<p>We see the unique light in you, and we love it! Therefore each shop is carefully crafted and custom designed,
 					making sure it truly reflects your the identity of your business.</p>
 					<!-- <ul class="actions">
-											<li><a href="#three" class="button">Learn More</a></li>
+														<li><a href="#three" class="button">Learn More</a></li>
 					</ul> -->
+					<a itemprop="url" id="demoButton0" href="http://watchonly.shelf.is" class="button"><span itemprop="title">Demo</span></a>
 					<a id="thirdButton" href="#three" class="button goto-next scrolly">Next</a>
 				</div>
 			</section>
@@ -166,7 +191,7 @@
 					</header>
 					<p>Web shop is perfect for extending your reach. No matter where your customers are, one click to the link, they're in your shop and ready to go.</p>
 					<!-- <ul class="actions">
-											<li><a href="#four" class="button">Learn More</a></li>
+														<li><a href="#four" class="button">Learn More</a></li>
 					</ul> -->
 					<a id="forthButton" href="#four" class="button goto-next scrolly">Next</a>
 				</div>
@@ -226,9 +251,9 @@
 								<p itemprop="specialty">Upload once, sync to all platforms</p>
 							</section>
 							<!-- <section class="4u$ 6u$(medium) 12u$(xsmall)">
-													<span class="icon alt major fa-lock"></span>
-													<h3>Massa arcu accumsan</h3>
-													<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+																<span class="icon alt major fa-lock"></span>
+																<h3>Massa arcu accumsan</h3>
+																<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
 							</section> -->
 						</div>
 					</div>
@@ -268,7 +293,9 @@
 					<li class="visible-xs-inline-block"><a href="tel:+61449843149" class="icon alt fa-phone"><span class="label">Phone</span></a></li>
 				</ul>
 				<ul class="vcard copyright">
-					<li>&copy; <a href="http://sk8.asia" itemprop="significantLink" class="url"><span itemprop="copyrightHolder creator editor provider" class="fn org">SK8 PTY LTD </span><span itemprop="copyrightYear">2015<span>.</a> All rights reserved.</li>
+					<li>
+						&copy;  <span itemprop="copyrightYear">2015<span> <a href="http://sk8.asia" itemprop="significantLink" class="url"><span itemprop="copyrightHolder creator editor provider" class="fn org">SK8 PTY LTD </span></a>
+					</li>
 					<!-- <li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
 				</ul>
 			</footer>

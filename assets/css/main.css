@@ -158,11 +158,8 @@ a:hover {
 	-webkit-transform: translate3d(0, 0, 0);
 	-ms-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
-	background: #348cb2 url("images/bg.jpg");
-	/*background-size: cover;*/
-        /*background-repeat: no-repeat;*/
-        /*background-position: left top;*/
-	background-repeat: repeat;
+	background: #348cb2 url("images/bg.jpg") bottom;
+	background-repeat: repeat-x;
 	height: 100%;
 	left: 0;
 	opacity: 1;

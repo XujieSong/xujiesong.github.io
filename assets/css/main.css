@@ -158,8 +158,8 @@ a:hover {
 	-webkit-transform: translate3d(0, 0, 0);
 	-ms-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
-	background: #348cb2 url("images/bg.jpg") bottom;
-	background-repeat: repeat-x;
+	background: #348cb2 url("images/miffan_landscape.gif") bottom;
+	background-repeat: repeat;
 	height: 100%;
 	left: 0;
 	opacity: 1;
@@ -822,6 +822,7 @@ a:hover {
 		}
 	}
 	#bg {
+		background: #348cb2 url("images/miffan_portrait.gif") bottom;
 		background-size: 300px auto;
 		width: 900px;
 	}
@@ -905,6 +906,7 @@ a:hover {
 		}
 	}
 	#bg {
+		background: #348cb2 url("images/miffan_portrait.gif") bottom;
 		background-size: 412.5px auto;
 		width: 1237.5px;
 	}

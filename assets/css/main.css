@@ -158,24 +158,16 @@ a:hover {
 	-webkit-transform: translate3d(0, 0, 0);
 	-ms-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
-	background: #348cb2 url("images/bg.jpg") bottom;
-	background-repeat: repeat-y;
+	background: #348cb2 url("images/bg.jpg");
+	/*background-size: cover;*/
+        /*background-repeat: no-repeat;*/
+        /*background-position: left top;*/
+	background-repeat: repeat;
 	height: 100%;
 	left: 0;
 	opacity: 1;
 	position: fixed;
 	top: 0;
-}
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
-	#bg {
-		background: #348cb2 url("images/bg.jpg") bottom;
-	}
 }
 @-moz-keyframes bg {
 	0% {
@@ -833,7 +825,6 @@ only screen and (                min-resolution: 2dppx) {
 		}
 	}
 	#bg {
-		background: #348cb2 url("images/bg.jpg") bottom;
 		background-size: 300px auto;
 		width: 900px;
 	}
@@ -917,7 +908,6 @@ only screen and (                min-resolution: 2dppx) {
 		}
 	}
 	#bg {
-		background: #348cb2 url("images/bg.jpg") bottom;
 		background-size: 412.5px auto;
 		width: 1237.5px;
 	}

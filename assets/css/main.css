@@ -159,7 +159,7 @@ a:hover {
 	-ms-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
 	background: #348cb2 url("images/bg.jpg") bottom;
-	background-repeat: repeat;
+	background-repeat: repeat-y;
 	height: 100%;
 	left: 0;
 	opacity: 1;

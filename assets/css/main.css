@@ -162,7 +162,7 @@ a:hover {
 	/*background-size: cover;*/
         /*background-repeat: no-repeat;*/
         /*background-position: left top;*/
-	background-repeat: repeat;
+	background-repeat: repeat-y;
 	height: 100%;
 	left: 0;
 	opacity: 1;

@@ -161,8 +161,8 @@ a:hover {
 	background: #348cb2 url("images/bg.jpg");
 	/*background-size: cover;*/
         /*background-repeat: no-repeat;*/
-        /*background-position: left top;*/
-	background-repeat: repeat-y;
+        background-position: bottom;
+	background-repeat: repeat-x;
 	height: 100%;
 	left: 0;
 	opacity: 1;
